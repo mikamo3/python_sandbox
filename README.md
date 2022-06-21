@@ -1,0 +1,3 @@
+pythonのdevcontainer
+
+お試しで書いたコードを入れておく
