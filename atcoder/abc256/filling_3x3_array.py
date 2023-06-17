@@ -14,12 +14,11 @@ def func(h1: int, h2: int, h3: int, w1: int, w2: int, w3: int):
     cnt = 0
     h1arr = ps(h1)
     h2arr = ps(h2)
-    h3arr = ps(h3)
     for x in h1arr:
         for x2 in h2arr:
-            for x3 in h3arr:
-                if x[0]+x2[0]+x3[0] == w1 and x[1]+x2[1]+x3[1] == w2 and x[2]+x2[2]+x3[2] == w3:
-                    cnt = cnt+1
+            x3 = [w1-(x[0]+x2[0]), w2 - (x[1]+x2[1]), w3-(x[2]+x2[2])]
+            if x3[0] > 0 and x3[1] > 0 and x3[2] > 0 and x3[0]+x3[1]+x3[2] == h3:
+                cnt = cnt+1
     return cnt
 
 
